@@ -1,0 +1,12 @@
+<div *ngIf="categories" class="row">
+  <div *ngFor="let category of categories" class="col-lg-4">
+    <div class="product-item sm-height bg-gray mb-4">
+      <a [routerLink]="['/home', category.id]"  class="product-category">{{category.name}} <span>{{category.count}} items</span></a>
+      <img [src]="category.image.src" alt="Image" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!categories" class="row">
+  Loading Categories....
+</div>

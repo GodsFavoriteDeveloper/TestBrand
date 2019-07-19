@@ -1,0 +1,61 @@
+.center-heading {
+  text-align: center;
+  width: 100%;
+  padding: 1px 0 43px;
+}
+h2.center-heading-title {
+  font-size: 19px;
+}
+.tb-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  z-index: 1;
+}
+.tb-shop-card.tb-style1 .tb-card-btn {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.vc_custom {
+  border-top-width: 1px !important;
+  border-right-width: 1px !important;
+  border-bottom-width: 1px !important;
+  border-left-width: 1px !important;
+  padding-top: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 20px !important;
+  padding-left: 20px !important;
+  border-left-color: #a7a7a7 !important;
+  border-left-style: solid !important;
+  border-right-color: #a7a7a7 !important;
+  border-right-style: solid !important;
+  border-top-color: #a7a7a7 !important;
+  border-top-style: solid !important;
+  border-bottom-color: #a7a7a7 !important;
+  border-bottom-style: solid !important;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  text-align: left;
+  position: relative;
+}
+.content h4 {
+  font-size: 13px;
+  line-height: 19.5px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.content p {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: #727272;
+}
+.image-icon {
+  padding-right: 20px;
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <br><br>
+  <div *ngIf="posts" class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div *ngFor="let post of posts" class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">{{post.title}}</h3>
+          <div class="mb-1 text-muted">{{post.date | date: fullDate}}</div>
+          <p [innerHTML]="post.content.substring(0, 79) + '...' " class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+            additional
+            content.</p>
+          <a [routerLink]="['/blog', post.id]" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" width="200" height="250" src="https://i.mdel.net/rankings/money/i/200w/FB60001_FB6004_DEEP_MODEL.jpg"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!posts">
+    Loading Blog Posts...........
+  </div>
+  <br><br>
+</div>
