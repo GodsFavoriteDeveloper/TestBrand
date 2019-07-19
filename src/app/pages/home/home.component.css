@@ -6,19 +6,6 @@
 h2.center-heading-title {
   font-size: 19px;
 }
-.tb-card-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 25px;
-  z-index: 1;
-}
-.tb-shop-card.tb-style1 .tb-card-btn {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
-}
 .vc_custom {
   border-top-width: 1px !important;
   border-right-width: 1px !important;
@@ -59,3 +46,45 @@ h2.center-heading-title {
 .image-icon {
   padding-right: 20px;
 }
+.heading-content {
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.banner-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400!important;
+  color: #f9f9f9;
+  font-size: 65px;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 5rem;
+  letter-spacing: 5px;
+}
+.banner-button {
+  margin: 0 auto;
+}
+.boxes-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400!important;
+  color: #f9f9f9;
+  font-size: 39px;
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 5rem;
+  letter-spacing: 5px;
+}
+.btn2 {
+  height: 33px !important;
+  font-size: 11px !important;
+}
+.btn-sm2 {
+  padding: 0.1rem 0.3rem !important;
+  font-size: 0.875rem;
+  line-height: 1;
+  border-radius: 0.2rem !important;
+}
+
+

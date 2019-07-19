@@ -13,7 +13,7 @@ export class CatalogueComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getProducts(12).subscribe(data => {
+    this.dataService.getProducts(12, 'desc').subscribe(data => {
       console.log(data);
     });
   }

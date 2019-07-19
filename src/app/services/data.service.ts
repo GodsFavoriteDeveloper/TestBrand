@@ -12,9 +12,9 @@ export class DataService {
 
   constructor(public http: HttpClient) { }
 
-  getProducts(count) {
+  getProducts(count, order) {
     // tslint:disable-next-line: max-line-length
-    return this.http.get(this.url + 'products?' + 'consumer_key=' + this.key + '&consumer_secret=' + this.secret + '&per_page=' + count).pipe(
+    return this.http.get(this.url + 'products?' + 'consumer_key=' + this.key + '&consumer_secret=' + this.secret + '&per_page=' + count + '&order=' + order).pipe(
       map((data: any) => {
         console.log('before mapping' + data);
         return data;

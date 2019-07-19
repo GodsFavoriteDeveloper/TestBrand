@@ -24,6 +24,8 @@ import { CatComponent } from './pages/cat/cat.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SingleCategoryComponent } from './pages/single-category/single-category.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader'
 
 
 @NgModule({
@@ -45,13 +47,15 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     BlogComponent,
     CategoriesComponent,
     CatComponent,
-    ThanksComponent
+    ThanksComponent,
+    SingleCategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [
 

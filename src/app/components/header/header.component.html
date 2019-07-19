@@ -13,18 +13,18 @@
     <div class="d-flex align-items-center justify-content-between">
       <div class="logo">
         <div class="site-logo">
-          <a [routerLink]="['/home']" class="js-logo-clone">Test Brand</a>
+          <a [routerLink]="['/home']" class="js-logo-clone">Fashion</a>
         </div>
       </div>
       <div class="main-nav d-none d-lg-block">
         <nav class="site-navigation text-right text-md-center" role="navigation">
           <ul class="site-menu js-clone-nav d-none d-lg-block">
-            <li><a [routerLink]="['/home']" routerLinkActive="'active'">Home</a></li>
-            <li><a [routerLink]="['/shop']" routerLinkActive="'active'">Shop</a></li>
-            <li><a [routerLink]="['/catalogue']" routerLinkActive="'active'">Catalogue</a></li>
-            <li><a [routerLink]="['/new-arrivals']" routerLinkActive="'active'">New Arrivals</a></li>
-            <li><a [routerLink]="['/blog']" routerLinkActive="'active'">Blog</a></li>
-            <li><a [routerLink]="['/contact']" routerLinkActive="'active'">Contact</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/home']">Home</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/shop']">Shop</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/catalogue']">Catalogue</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/new-arrivals']">New Arrivals</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/blog']">Blog</a></li>
+            <li role="presentation" routerLinkActive="active"><a [routerLink]="['/contact']">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -41,3 +41,5 @@
     </div>
   </div>
 </div>
+
+

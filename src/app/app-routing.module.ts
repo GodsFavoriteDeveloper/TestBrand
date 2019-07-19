@@ -1,3 +1,4 @@
+import { CategoriesComponent } from './components/categories/categories.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { CatComponent } from './pages/cat/cat.component';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -35,7 +36,14 @@ const routes: Routes = [
   { path: 'wishlist' , component: WishlistComponent },
   { path: 'checkout' , component: CheckoutComponent },
   { path: 'blog' , component: BlogComponent },
-  { path: 'thank-you' , component: ThanksComponent }
+  { path: 'thank-you' , component: ThanksComponent },
+  { path: 'categories' ,
+    children: [
+     {  path: '', component: CategoriesComponent },
+     {  path: ':categoryId' , component: CategoriesComponent }
+   ]
+   }
+
 ];
 
 @NgModule({

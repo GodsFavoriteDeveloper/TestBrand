@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
   products: any;
   loadingMessage = 'Loading Products...';
   @Input() productCount: number;
+  @Input() order: string;
 
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) { }
 
@@ -20,7 +21,7 @@ export class ProductsComponent implements OnInit {
 
   loadProducts() {
     this.spinner.show();
-    this.dataService.getProducts(this.productCount).subscribe((data) => {
+    this.dataService.getProducts(this.productCount, this.order).subscribe((data) => {
       this.spinner.hide();
       console.log(data);
       this.products = data;

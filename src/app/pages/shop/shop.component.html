@@ -31,51 +31,46 @@
                   Latest
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                  <a class="dropdown-item" href="#">Men</a>
-                  <a class="dropdown-item" href="#">Women</a>
-                  <a class="dropdown-item" href="#">Children</a>
+                  <a (click)="categoryFilter(category.id)" *ngFor="let category of categories" class="dropdown-item">{{category.name}}</a>
+                  <a (click)="getProducts()" class="dropdown-item">Reset Filter</a>
                 </div>
               </div>
               <div class="btn-group">
                 <button type="button" class="btn btn-white btn-sm dropdown-toggle px-4" id="dropdownMenuReference"
                   data-toggle="dropdown">Reference</button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                  <a class="dropdown-item" href="#">Relevance</a>
-                  <a class="dropdown-item" href="#">Name, A to Z</a>
-                  <a class="dropdown-item" href="#">Name, Z to A</a>
+                  <a class="dropdown-item">Relevance</a>
+                  <a class="dropdown-item">Name, A to Z</a>
+                  <a class="dropdown-item">Name, Z to A</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Price, low to high</a>
-                  <a class="dropdown-item" href="#">Price, high to low</a>
+                  <a class="dropdown-item">Price, low to high</a>
+                  <a class="dropdown-item">Price, high to low</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row mb-5">
-
-          <div *ngFor="let product of products" class="col-lg-6 col-md-6 item-entry mb-4">
+        <div *ngIf="products" class="row mb-5">
+          <div *ngFor="let product of products" class="col-lg-4 col-md-4 item-entry mb-4">
             <a [routerLink]="['/shop', product.id]" class="product-item md-height bg-gray d-block">
               <img [src]="product.images[0].src" alt="Image" class="img-fluid">
             </a>
             <h2 class="item-title"><a [routerLink]="['/shop', product.id]">{{product.name}}</a></h2>
             <strong class="item-price">{{product.price}}</strong>
           </div>
+        </div>
 
+        <div *ngIf="!products" class="row mb-5">
+          <div *ngFor="let product of products" class="col-lg-4 col-md-4 item-entry mb-4">
+            <ngx-skeleton-loader count="1" appearance="circle"></ngx-skeleton-loader>
+          </div>
         </div>
 
         <div class="row">
           <div class="col-md-12 text-center">
             <div class="site-block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
+
             </div>
           </div>
         </div>
@@ -148,3 +143,4 @@
 
   </div>
 </div>
+

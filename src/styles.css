@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* Base */
+/************ My styles start  ***********/
 .cool-grid img {
   max-width: 100% !important;
 }
@@ -25,6 +26,7 @@
   position: relative;
   padding: 0 17px;
 }
+/************ My styles end  ***********/
 body {
   font-family: 'Montserrat', sans-serif !important;
   color: #363636;
@@ -982,7 +984,34 @@ a {
 .height-auto {
   height: auto !important; }
 
-.banner-bg {
-  background: url('assets/images/store-banner.jpg');
-  background-size: cover !important;
-}
+  .banner-bg {
+    background: url('assets/images/store-banner.jpg');
+    background-size: cover !important;
+  }
+  .bottom-banner-bg {
+    background: url('assets/images/bg.jpg');
+    background-size: cover !important;
+    margin-bottom: 25px;
+  }
+  .first-box {
+    background: url('assets/images/for_men.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 91px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .second-box {
+    background: url('assets/images/for_women.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 91px;
+    margin-bottom: 5px;
+    text-align: center;
+  }

@@ -26,7 +26,7 @@ export class ShopComponent implements OnInit {
   }
 
   getProducts() {
-    this.dataService.getProducts(12).subscribe(data => {
+    this.dataService.getProducts(12, 'desc').subscribe(data => {
       console.log(data);
       this.products = data;
     });

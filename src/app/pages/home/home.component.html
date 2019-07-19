@@ -70,23 +70,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6">
-        <div>
-          <img src="assets/images/left.jpg" alt="">
-          <div class="tb-card-text">
-            <h2 class="tb-f21-lg tb-white-c tb-shop-card-title tb-mb1">Grab your Coat</h2> <a
-              href="http://themebubble.com/demo/webify/shop/product-category/clothing/accessories/" target="_self"
-              class="tb-card-btn tb-line1-14 tb-f10-lg tb-white-c text-uppercase">Shop Now</a>
-          </div>
+        <div class="first-box">
+          <a [routerLink]="['/home', 31]"><h3 class="boxes-heading">For Men</h3></a>
         </div>
       </div>
       <div class="col-lg-6 col-md-6">
-        <div>
-          <img src="assets/images/left.jpg" alt="">
-          <div class="tb-card-text">
-            <h2 class="tb-f21-lg tb-white-c tb-shop-card-title tb-mb1">Grab your Coat</h2> <a
-              href="http://themebubble.com/demo/webify/shop/product-category/clothing/accessories/" target="_self"
-              class="tb-card-btn tb-line1-14 tb-f10-lg tb-white-c text-uppercase">Shop Now</a>
-          </div>
+        <div class="second-box">
+          <a [routerLink]="['/home', 15]"><h3 class="boxes-heading">For Women</h3></a>
         </div>
       </div>
     </div>
@@ -98,30 +88,39 @@
   <div class="container">
     <div class="row">
       <div class="center-heading">
-        <h2 class="center-heading-title">Trending this Week</h2>
+        <h2 class="center-heading-title">Trending Products</h2>
       </div>
     </div>
-    <app-products productCount="4"></app-products>
+    <app-products productCount="4" order="desc"></app-products>
   </div>
 </div>
 <!-- End Popular Products Section -->
 
-<!---- Discover Sections -->
-<div class="site-section">
+
+
+
+
+
+<div class="bottom-banner-bg py-5" data-aos="fade">
   <div class="container">
-    <div class="title-section mb-5">
-      <h2 class="text-uppercase"><span class="d-block">Discover</span> The Collections</h2>
+    <div class="row">
+      <div class="heading-content">
+        <h2 class="banner-title">Buy 3 Dresses And Get 10% Off</h2>
+        <button [routerLink]="['/shop']"  class="btn btn-primary banner-button">Shop Now</button>
+      </div>
     </div>
-    <app-categories></app-categories>
   </div>
 </div>
 
-<!---- Discover Sections -->
+<!-- Popular Products Section -->
 <div class="site-section">
   <div class="container">
-    <div class="center-heading">
-      <h2 class="center-heading-title">Our Blog</h2>
+    <div class="row">
+      <div class="center-heading">
+        <h2 class="center-heading-title">Popular Products</h2>
+      </div>
     </div>
-    <app-blog></app-blog>
+    <app-products productCount="4" order="asc"></app-products>
   </div>
 </div>
+<!-- End Popular Products Section -->
