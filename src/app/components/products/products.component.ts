@@ -9,6 +9,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ProductsComponent implements OnInit {
   products: any;
+  loadingMessage = 'Loading Products...';
   @Input() productCount: number;
 
   constructor(private dataService: DataService, private spinner: NgxSpinnerService) { }
@@ -25,7 +26,10 @@ export class ProductsComponent implements OnInit {
       this.products = data;
     }, (error) => {
       console.log(error);
-      this.spinner.hide();
+      setTimeout(() => {
+        this.spinner.hide();
+        this.loadingMessage = 'You seem to be offline! Please check connection';
+      }, 3000);
     });
   }
 

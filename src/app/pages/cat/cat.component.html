@@ -1,7 +1,7 @@
 <div class="site-section">
   <div class="container">
     <div class="row">
-      <div *ngFor="let product of category" class="col-lg-4 col-md-6 item-entry mb-4">
+      <div *ngFor="let product of category" class="col-lg- col-md-6 item-entry mb-4">
         <a [routerLink]="['/shop', product.id]" class="product-item md-height bg-gray d-block">
           <img [src]="product.images[0].src" alt="Image" class="img-fluid">
         </a>
