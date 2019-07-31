@@ -12,7 +12,7 @@
 -->
 
 
-
+<ngx-spinner></ngx-spinner>
 <div class="site-section">
   <div class="container">
 
@@ -39,12 +39,8 @@
                 <button type="button" class="btn btn-white btn-sm dropdown-toggle px-4" id="dropdownMenuReference"
                   data-toggle="dropdown">Reference</button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                  <a class="dropdown-item">Relevance</a>
-                  <a class="dropdown-item">Name, A to Z</a>
-                  <a class="dropdown-item">Name, Z to A</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item">Price, low to high</a>
-                  <a class="dropdown-item">Price, high to low</a>
+                  <a (click)="sortFilter('desc')" class="dropdown-item">Latest First</a>
+                  <a (click)="sortFilter('asc')" class="dropdown-item">Oldest First</a>
                 </div>
               </div>
             </div>
@@ -57,7 +53,7 @@
               <img [src]="product.images[0].src" alt="Image" class="img-fluid">
             </a>
             <h2 class="item-title"><a [routerLink]="['/shop', product.id]">{{product.name}}</a></h2>
-            <strong class="item-price">{{product.price}}</strong>
+            <strong class="item-price">{{product.price | currency}}</strong>
           </div>
         </div>
 
@@ -94,28 +90,14 @@
           </ul>
         </div>
 
-        <div class="border p-4 rounded mb-4">
-          <!--
+        <!--<div class="border p-4 rounded mb-4">
+
             <div class="mb-4">
               <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
               <div id="slider-range" class="border-primary"></div>
               <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
             </div>
-        -->
 
-
-          <div class="mb-4">
-            <h3 class="mb-3 h6 text-uppercase text-black d-block">Size</h3>
-            <label for="s_sm" for="option-sm" class="d-flex">
-              <input type="checkbox" name="size" id="s_sm" class="mr-2 mt-1"> <span class="text-black">Small (2,319)</span>
-            </label>
-            <label for="s_md" class="d-flex">
-              <input type="checkbox" name="size" id="s_md" class="mr-2 mt-1"> <span class="text-black">Medium (1,282)</span>
-            </label>
-            <label for="s_lg" class="d-flex">
-              <input type="checkbox" name="size" id="s_lg" class="mr-2 mt-1"> <span class="text-black">Large (1,392)</span>
-            </label>
-          </div>
 
           <div class="mb-4">
             <h3 class="mb-3 h6 text-uppercase text-black d-block">Color</h3>
@@ -137,7 +119,7 @@
             </a>
           </div>
 
-        </div>
+        </div>-->
       </div>
     </div>
 

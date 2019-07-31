@@ -1,0 +1,44 @@
+<div *ngIf="post" class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="item-entry">
+          <a href="#" class="product-item md-height bg-gray d-block">
+            <img src="https://i.pinimg.com/originals/95/26/19/952619d4368452329e26eb7ec0752971.png" alt="Image" class="img-fluid">
+          </a>
+
+        </div>
+
+      </div>
+      <div class="col-md-9">
+        <h2 class="text-black">{{post?.title}}</h2>
+        <p [innerHTML]="post.content"></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="site-section block-3 site-blocks-2">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 site-section-heading text-center pt-4">
+        <h2>Featured Products</h2>
+      </div>
+    </div>
+    <app-products productCount="3"></app-products>
+  </div>
+</div>
+-->
+
+
+<div *ngIf="!post">
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        Loading post..........
+      </div>
+    </div>
+  </div>
+</div>

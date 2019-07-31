@@ -1,3 +1,4 @@
+import { BlogPostComponent } from './pages/blog/blog-post/blog-post.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ThanksComponent } from './pages/thanks/thanks.component';
 import { CatComponent } from './pages/cat/cat.component';
@@ -35,7 +36,12 @@ const routes: Routes = [
   { path: 'cart' , component: CartComponent },
   { path: 'wishlist' , component: WishlistComponent },
   { path: 'checkout' , component: CheckoutComponent },
-  { path: 'blog' , component: BlogComponent },
+  { path: 'blog' ,
+    children: [
+      {  path: '', component: BlogComponent },
+      {  path: ':postId' , component: BlogPostComponent }
+    ]
+  },
   { path: 'thank-you' , component: ThanksComponent },
   { path: 'categories' ,
     children: [

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, timeout } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class DataService {
       filter((data: any) => {
         return true;
       }),
+      timeout(10000)
     );
   }
 
@@ -35,6 +36,7 @@ export class DataService {
       filter((data: any) => {
         return true;
       }),
+      timeout(10000)
     );
   }
 
@@ -48,6 +50,7 @@ export class DataService {
       filter((data: any) => {
         return true;
       }),
+      timeout(10000)
     );
   }
 
@@ -61,6 +64,21 @@ export class DataService {
       filter((data: any) => {
         return true;
       }),
+      timeout(10000)
+    );
+  }
+
+  getByAttribute(count, attr) {
+    // tslint:disable-next-line: max-line-length
+    return this.http.get(this.url + 'products?' + 'consumer_key=' + this.key + '&consumer_secret=' + this.secret + '&per_page=' + count + '&attribute_term=' + attr).pipe(
+      map((data: any) => {
+        console.log('before mapping' + data);
+        return data;
+      }),
+      filter((data: any) => {
+        return true;
+      }),
+      timeout(10000)
     );
   }
 
@@ -75,11 +93,12 @@ export class DataService {
       filter((data: any) => {
         return true;
       }),
+      timeout(10000)
     );
   }
 
-  getStuff(){
-    this.http.get('https://example.com/wp-json/wc/v3/products/')
+  getStuff() {
+    this.http.get('https://example.com/wp-json/wc/v3/products/');
   }
 
   getPosts() {
@@ -87,7 +106,18 @@ export class DataService {
       map((data: any) => {
         console.log(data);
         return data.posts;
-      })
+      }),
+      timeout(10000)
+    );
+  }
+
+  getPost(postId) {
+    return this.http.get('https://testbrand.cloudaccess.host/api/get_post/?id=' + postId).pipe(
+      map((data: any) => {
+        console.log(data);
+        return data;
+      }),
+      timeout(10000)
     );
   }
 }
